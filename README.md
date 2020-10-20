@@ -25,6 +25,12 @@ Wordpress starter project.
   - [Learn how to develop WP plugins, widgets and REST API](#learn-how-to-develop-wp-plugins-widgets-and-rest-api)
     - [Add Document Type Styles New](#add-document-type-styles-new)
     - [Add Document Type Admin Page](#add-document-type-admin-page)
+    - [Chapter 2 - Plugin Header](#chapter-2---plugin-header)
+    - [Chapter 2 - Page Header Output](#chapter-2---page-header-output)
+    - [Chapter 2 - Add Favicon Meta Tag](#chapter-2---add-favicon-meta-tag)
+    - [Chapter 2 - Modify Contents of Generator Meta Tag](#chapter-2---modify-contents-of-generator-meta-tag)
+    - [Chapter 2 - Email Page Link](#chapter-2---email-page-link)
+    - [Chapter 2 - Nav Menu Filter](#chapter-2---nav-menu-filter)
     - [References](#references)
   - [Create custom WP plugins for transfiguration.sg](#create-custom-wp-plugins-for-transfigurationsg)
   - [Automate creation of custom WP plugins](#automate-creation-of-custom-wp-plugins)
@@ -37,7 +43,7 @@ Wordpress starter project.
 ## About wpcode
 **wpcode** was a personal project to:
 - learn how to develop Wordpress ["WP"] plugins, widgets and REST API
-- create custom WP plugins for transfiguration.sg
+- create custom WP plugins for [transfiguration.sg](https://transfiguration.sg)
 - automate creation of custom WP plugins
 
 ---
@@ -52,8 +58,14 @@ Wordpress starter project.
        +- docs/                           <-- Documentation
        +- src/                            <-- Root of source code
           +- plugins/                     <-- Root of plugins code
-             +- add_doctype_styles_new/   <-- Learn how to develop WP plugin
-             +- add_doctype_admin_page/   <-- Learn how to develop WP plugin
+             +- add_doctype_styles_new/   <-- Learn how to develop WP plugin by Krol
+             +- add_doctype_admin_page/   <-- Learn how to develop WP plugin by Krol
+             +- ch2-plugin-header/        <-- Learn how to develop WP plugin by Lefebvre
+             +- ch2-page-header-output/   <-- Learn how to develop WP plugin by Lefebvre
+             +- ch2-favicon/              <-- Learn how to develop WP plugin by Lefebvre
+             +- ch2-generator-filter/     <-- Learn how to develop WP plugin by Lefebvre
+             +- ch2-email-page-link/      <-- Learn how to develop WP plugin by Lefebvre
+             +- ch2-nav-menu-filter/      <-- Learn how to develop WP plugin by Lefebvre
 
 ---
 ### Installation
@@ -73,17 +85,37 @@ Once the plugin is installed, it will show up on the plugins page. Now, you can 
 
 ### Add Document Type Styles New
 - Simple plugin that adds icons to document links within WP. Includes support for PDF, DOC, MP3 and ZIP.
-- 
+
 ### Add Document Type Admin Page
 - Modified Add Document Type Styles New plugin to add a custom admin page. Allows support for additional document types.
 
-NOTE: Krol's plugins above did not display correctly even though they had no errors.
+### Chapter 2 - Plugin Header
+- Declares a plugin that will be visible in the WordPress admin interface.
+
+### Chapter 2 - Page Header Output
+- Register an action hook function to be able to add the Google Analytics page header JavaScript code
+
+### Chapter 2 - Add Favicon Meta Tag
+- Simple plugin that will add a favicon meta tag to a website's header, pointing to an image file located in the plugin directory.
+
+### Chapter 2 - Modify Contents of Generator Meta Tag
+- Implement your first filter callback function to modify the contents of the generator meta tag that is output as part of the site header.
+
+### Chapter 2 - Email Page Link
+- Adds a link to page or post, allowing visitors to email a link to the page that they are currently viewing.
+
+### Chapter 2 - Nav Menu Filter
+- Hide an item from the navigation menu for users who are not logged in to your site.
+
+NOTE: Both Krol's and Lefebvre's plugins did not display correctly even though they had no errors.
 
 ### References
-- Free vector icons, accessed 19-Oct-2020, URL: https://www.flaticon.com/
-- [Icons made by catkuro](https://www.flaticon.com/authors/catkuro)
 - Karol Krol, 2017, WordPress Complete Sixth Edition
 - Yannick Lefebvre, 2017, WordPress Plugin Development Cookbook, 2nd Edition
+- Free vector icons, accessed 19-Oct-2020, URL: https://www.flaticon.com/ (Credit: [Icons made by catkuro](https://www.flaticon.com/authors/catkuro) )
+- Retrieve a site's favicon, accessed 20-Oct-2020, URL: https://www.getfavicon.org
+- Free icons, accessed 20-Oct-2020, URL: http://iconarchive.com
+- Display debug messages in the admin bar, accessed 20-Oct-2020, [WP Plugin Debug Bar](https://wordpress.org/plugins/debug-bar)
 
 ## Create custom WP plugins for transfiguration.sg
 
